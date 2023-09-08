@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super()}} - {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+      {% for cloth in cloths %}
+      <div class="col">
+        <div class="card">
+          <img src="/static/{{ cloth.image }}" class="card-img-top" alt="Image" />
+          <div class="card-body">
+            <h5 class="card-title">{{ cloth.name }}</h5>
+            <p class="card-text">{{ cloth.description }}
+            </p>
+            <a href="/{{ cloth.page }}/" class="btn btn-primary">Перейти</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
