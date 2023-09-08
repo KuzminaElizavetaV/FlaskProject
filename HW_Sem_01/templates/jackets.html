@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super()}} - {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+      {% for jacket in jackets %}
+      <div class="col">
+        <div class="card">
+          <img src="/static/{{ jacket.image }}" class="card-img-top" alt="Image" />
+          <div class="card-body">
+            <h5 class="card-title">{{ jacket.name }}</h5>
+            <p class="card-text">{{ jacket.description }}
+            </p>
+            <a href="#" class="btn btn-primary">Купить</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
