@@ -213,5 +213,121 @@ def shoes():
     return render_template('shoes.html', **context, shoes=shoes_list)
 
 
+@app.route('/boots/')
+def boots():
+    context = {'title': 'Обувь'}
+    boots_list = [
+        {
+            'name': 'Сапоги_1',
+            'image': 'boots_1.jpg',
+            'description': 'Высокие сапоги на платформе для подростка, черные, кожа, сезон осень-весна, размер 36'
+        },
+        {
+            'name': 'Сапоги_2',
+            'image': 'boots_2.jpg',
+            'description': 'Женские сапоги, черные, кожа, сезон осень-весна, размер 37'
+        },
+        {
+            'name': 'Сапоги_3',
+            'image': 'boots_3.jpg',
+            'description': 'Женские сапоги, черные, замша, сезон осень-весна, размер 36'
+        },
+        {
+            'name': 'Сапоги_4',
+            'image': 'boots_4.jpg',
+            'description': 'Мужские сапоги, черные, кожа, сезон осень-весна, размер 43'
+        }
+
+    ]
+    return render_template('boots.html', **context, boots=boots_list)
+
+
+@app.route('/little_boots/')
+def little_boots():
+    context = {'title': 'Обувь'}
+    little_boots_list = [
+        {
+            'name': 'Ботинки_1',
+            'image': 'little_boots_1.jpg',
+            'description': 'Ботинки женские, черные, кожа, размер 36'
+        },
+        {
+            'name': 'Ботинки_2',
+            'image': 'little_boots_2.jpg',
+            'description': 'Ботинки подростковые унисекс, бордово-черные, размер 37'
+        },
+        {
+            'name': 'Ботинки_3',
+            'image': 'little_boots_3.jpg',
+            'description': 'Ботинки женские, светло-коричневые, кожа, размер 37'
+        },
+        {
+            'name': 'Ботинки_4',
+            'image': 'little_boots_4.jpg',
+            'description': 'Ботинки подростковые, бордовые, размер 35'
+        }
+
+    ]
+    return render_template('little_boots.html', **context, little_boots=little_boots_list)
+
+
+@app.route('/shoe/')
+def shoe():
+    context = {'title': 'Туфли'}
+    shoe_list = [
+        {
+            'name': 'Туфли_1',
+            'image': 'shoes_1.jpg',
+            'description': 'Туфли женские, цвет черный, кожа, размер 37'
+        },
+        {
+            'name': 'Туфли_2',
+            'image': 'shoes_2.jpg',
+            'description': 'Туфли женские, цвет бежевый, лак, шпилька, размер 36'
+        },
+        {
+            'name': 'Туфли_3',
+            'image': 'shoes_3.jpg',
+            'description': 'Туфли женские, цвет черный, кожа, размер 38'
+        },
+        {
+            'name': 'Туфли_4',
+            'image': 'shoes_4.jpg',
+            'description': 'Туфли подростковые, цвет черный, кожа, размер 38'
+        }
+
+    ]
+    return render_template('shoe.html', **context, shoe=shoe_list)
+
+
+@app.route('/sneakers/')
+def sneakers():
+    context = {'title': 'Кроссовки'}
+    sneakers_list = [
+        {
+            'name': 'Кроссовки_1',
+            'image': 'sneakers_1.jpg',
+            'description': 'Женские черно-белые кроссы, размер 37'
+        },
+        {
+            'name': 'Кроссовки_2',
+            'image': 'sneakers_2.jpeg',
+            'description': 'Розовые кроссовки для девочки-подростка, размер 35'
+        },
+        {
+            'name': 'Кроссовки_3',
+            'image': 'sneakers_3.jpg',
+            'description': 'Женские белые кроссовки, размер 36'
+        },
+        {
+            'name': 'Кроссовки_4',
+            'image': 'sneakers_4.jpg',
+            'description': 'Яркие кроссы для подростка унисекс, размер 37'
+        }
+
+    ]
+    return render_template('sneakers.html', **context, sneakers=sneakers_list)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
