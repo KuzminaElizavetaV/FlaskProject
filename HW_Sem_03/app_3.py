@@ -15,8 +15,22 @@ def init_db():
     db.create_all()
 
 
+@app.route('/')
+@app.route('/main/')
+def main():
+    context = {'title': 'Главная'}
+    return render_template('main.html', **context)
+
+
+@app.route('/success_register/')
+def success_register():
+    context = {'title': 'Успешная регистрация'}
+    return render_template('success_register.html', **context)
+
+
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
+    context = {'title': 'Регистрация'}
     form = RegistrationForm()
     if request.method == 'POST' and form.validate():
         login = form.login.data
@@ -37,9 +51,8 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         # Выводим сообщение об успешной регистрации
-        success_msg = 'Вы зарегистрированы!'
-        return success_msg
-    return render_template('register.html', form=form)
+        return success_register()
+    return render_template('register.html', **context, form=form)
 
 
 if __name__ == "__main__":
