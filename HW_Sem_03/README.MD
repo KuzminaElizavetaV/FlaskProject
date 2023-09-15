@@ -17,7 +17,7 @@ _____
 
 ----------
 
-### Добавить Текст [**app_3.py**](https://github.com/KuzminaElizavetaV/FlaskProject/blob/main/HW_Sem_03/app_3.py "Ссылка на файл")
+### Реализовано в [**app_3.py**](https://github.com/KuzminaElizavetaV/FlaskProject/blob/main/HW_Sem_03/app_3.py "Ссылка на файл")
 
 
  
