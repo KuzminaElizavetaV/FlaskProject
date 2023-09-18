@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container text-end my-5">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Добавление нового пользователя</h1>
+          <form method="post">
+            <label for="user_name">Имя пользователя</label>
+            <input type="text" id="user_name" name="user_name">
+            <br>
+            <br>
+            <label for="user_email">Электронная почта</label>
+            <input type="email" id="user_email" name="user_email">
+            <br>
+            <br>
+            <label for="user_password">Пароль</label>
+            <input type="password" id="user_password" name="user_password">
+            <br>
+            <br>
+            <p>
+                <input type="submit" value="Добавить пользователя" class="btn btn-primary">
+            </p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
