@@ -5,7 +5,7 @@
 import os
 import threading
 
-PATH = '../lec_04'  # другой путь указать
+PATH = '../Seminar_02'
 count = 0
 
 

@@ -5,7 +5,7 @@
 import os
 import multiprocessing
 
-PATH = '../lec_04'  # другой путь указать
+PATH = '../Seminar_02'
 counter = multiprocessing.Value('i', 0)
 
 
